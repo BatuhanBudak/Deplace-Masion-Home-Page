@@ -48,7 +48,7 @@ export default function Header() {
       >
         <NavMobile toggleDrawer={toggleDrawer} drawerOpen={drawerOpen} />
 
-        <NavDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
+        <NavDrawer drawerOpen={drawerOpen} />
       </nav>
       <nav className="header">
         <NavDesktop />
