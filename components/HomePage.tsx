@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Circle, HandWritten, RightArrow, Tape } from "./Icon";
+import { Circle, HandWritten, RightArrow, Tape, Virgolette } from "./Icon";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
@@ -147,6 +147,129 @@ export default function HomePage() {
             <Circle />
             <RightArrow />
           </a>
+        </div>
+      </div>
+      <div className="c-section wf-section">
+        <div className="c-marquee">
+          <div className="c-marquee-wrap">
+            <div className="c-marquee-item">
+              <div className="c-marquee-text">
+                <div className="c-marquee-content">
+                  <h1 className="c-marquee-heading">
+                    deplace shop&nbsp;&nbsp;
+                    <span className="c-marquee-span">·</span>&nbsp;&nbsp;do not
+                    scroll&nbsp;&nbsp;·{" "}
+                  </h1>
+                </div>
+                <div className="c-marquee-content">
+                  <h1 className="c-marquee-heading">
+                    deplace shop&nbsp;&nbsp;
+                    <span className="c-marquee-span">·</span>&nbsp;&nbsp;do not
+                    scroll&nbsp;&nbsp;·{" "}
+                  </h1>
+                </div>
+                <div className="c-marquee-content">
+                  <h1 className="c-marquee-heading">
+                    deplace shop&nbsp;&nbsp;
+                    <span className="c-marquee-span">·</span>&nbsp;&nbsp;do not
+                    scroll&nbsp;&nbsp;·{" "}
+                  </h1>
+                </div>
+                <div className="c-marquee-content">
+                  <h1 className="c-marquee-heading">
+                    deplace shop&nbsp;&nbsp;
+                    <span className="c-marquee-span">·</span>&nbsp;&nbsp;do not
+                    scroll&nbsp;&nbsp;·{" "}
+                  </h1>
+                </div>
+                <div className="c-marquee-content">
+                  <h1 className="c-marquee-heading">
+                    deplace shop&nbsp;&nbsp;
+                    <span className="c-marquee-span">·</span>&nbsp;&nbsp;do not
+                    scroll&nbsp;&nbsp;·{" "}
+                  </h1>
+                </div>
+                <div className="c-marquee-content">
+                  <h1 className="c-marquee-heading">
+                    deplace shop&nbsp;&nbsp;
+                    <span className="c-marquee-span">·</span>&nbsp;&nbsp;do not
+                    scroll&nbsp;&nbsp;·{" "}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="e-section quote wf-section">
+        <div className="e-outer">
+          <div className="e-aside">who we are</div>
+          <h2 className="e-heading eh-1">
+            An independent{" "}
+            <a href="" aria-label="eh-link" className="eh-link">
+              brand
+            </a>{" "}
+            of
+          </h2>
+        </div>
+        <div className="e-outer">
+          <h2 className="e-heading">urban trekking shoes and accessories</h2>
+        </div>
+        <div className="e-outer">
+          <h2 className="e-heading">that comes from a convergence of </h2>
+        </div>
+        <div className="e-outer">
+          <h2 className="e-heading">arts and personalities.</h2>
+        </div>
+      </div>
+      <div className="s-section wf-section">
+        <div className="grid-slider-wrap w-dyn-list">
+          <div className="w-dyn-empty">
+            <div>No items found.</div>
+          </div>
+        </div>
+        <div className="l-wrap l-lerp">
+          <div className="link-wrap">
+            <a id="shop-all" href="" className="l-link">
+              SHOP&nbsp;ALL
+            </a>
+            <div className="underline-effect w-embed"></div>
+          </div>
+          <a href="" className="lerp-wrap w-inline-block">
+            <Circle />
+            <RightArrow />
+          </a>
+        </div>
+      </div>
+      <div className="r-section wf-section">
+        <div className="r-content">
+          <div className="r-wrap-1">
+            <Virgolette />
+
+            <div className="reviewer-grid">
+              <div className="reviewer-wrap">
+                <div className="reviewer-inner">
+                  <h3 className="reviewer">WiLLiAm GIbSoN</h3>
+                  <h3 className="reviewer">JAmiE K. CoHen</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="r-wrap-2">
+            <div className="r-inner ">
+              <h4 className="review">
+                Good things come to those who wait – Déplacé Maison is what has
+                been missing in the modern fashion industry for years. Buy a
+                shoe of high quality and design it finally happened. &nbsp;
+              </h4>
+              <h4 className="review">
+                Déplacé Maison is a convincer for anticipation. The urban
+                trekking as nevers seen before. An exceptional product that has
+                no equal alongside a great team represent the brand
+                professionally. &nbsp;{" "}
+              </h4>
+            </div>
+          </div>
         </div>
       </div>
     </main>

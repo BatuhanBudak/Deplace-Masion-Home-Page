@@ -179,6 +179,33 @@ h2 {
   font-weight: 700;
   letter-spacing: -0.06em;
 }
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--ff-secondary);
+  color: #141414;
+  font-size: 5vw;
+  line-height: 5vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 1.3vw;
+  line-height: 1.3vw;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1vw;
+  line-height: 1vw;
+  font-weight: 400;
+}
 
 /* button */
 
