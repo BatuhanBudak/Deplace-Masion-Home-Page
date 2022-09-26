@@ -151,6 +151,9 @@ body {
   font-weight: 400;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 h1,

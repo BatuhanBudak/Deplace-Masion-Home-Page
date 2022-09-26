@@ -82,7 +82,7 @@ export default function NavDrawer({ drawerOpen }) {
                     href=""
                     className="nav-social w-inline-block"
                   >
-                    <FacebookLogo />
+                    <FacebookLogo fill={null} classname={"nav-social-icon"} />
                   </a>
                 </div>
                 <div className="nav-f-outer">
@@ -91,7 +91,7 @@ export default function NavDrawer({ drawerOpen }) {
                     href=""
                     className="nav-social social-r w-inline-block"
                   >
-                    <InstagramLogo />
+                    <InstagramLogo fill={null} classname={"nav-social-icon"} />
                   </a>
                 </div>
               </div>

@@ -1,19 +1,20 @@
 import React from "react";
-import { ArrowUp, Circle, FacebookLogo, InstagramLogo } from "./Icon";
+import {
+  Circle,
+  FacebookLogo,
+  InstagramLogo,
+  NewsletterFace,
+  RightArrow,
+} from "./Icon";
 
 export default function Footer() {
   return (
     <div className="footer-grid">
-      {/* <div className="f-col1">
+      <div className="f-col1">
         <div className="f-news">
           <h5 className="f-title">SUBSCRIBE&nbsp;TO&nbsp;NEWSLETTER</h5>
           <div className="f-icon">
-            <img
-              src="https://global-uploads.webflow.com/5c9c9c646cf0969b319f264f/5d2dc19a2be6baa7f9e25b8c_newsletter-face.svg"
-              alt="f-newsltetter"
-              draggable="false"
-              className="newsletter"
-            />
+            <NewsletterFace />
           </div>
         </div>
         <div className="f-news">
@@ -56,7 +57,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="f-col2">
         <div className="f-container f-down">
           <h5 className="f-title">info</h5>
@@ -120,18 +121,18 @@ export default function Footer() {
         <div className="f-container">
           <a href="" className="back-top w-inline-block w--current">
             <Circle />
-            <ArrowUp />
+            <RightArrow />
           </a>
         </div>
         <div className="f-container f-up">
           <div className="f-social-wrap">
             <a href="" className="f-social w-inline-block">
-              <FacebookLogo />
+              <FacebookLogo fill="#141414" classname="f-social-icon" />
             </a>
           </div>
           <div className="f-social-wrap fsw-2">
             <a href="" className="f-social w-inline-block">
-              <InstagramLogo />
+              <InstagramLogo fill="#141414" classname="f-social-icon" />
             </a>
           </div>
         </div>

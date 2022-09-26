@@ -204,29 +204,59 @@ export default function HomePage() {
       <div className="e-section quote wf-section">
         <div className="e-outer">
           <div className="e-aside">who we are</div>
-          <h2 className="e-heading eh-1">
+          <motion.h2
+            className="e-heading eh-1"
+            variants={variants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             An independent{" "}
             <a href="" aria-label="eh-link" className="eh-link">
               brand
             </a>{" "}
             of
-          </h2>
+          </motion.h2>
         </div>
-        <div className="e-outer">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="e-outer"
+        >
           <h2 className="e-heading">urban trekking shoes and accessories</h2>
-        </div>
-        <div className="e-outer">
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="e-outer"
+        >
           <h2 className="e-heading">that comes from a convergence of </h2>
-        </div>
-        <div className="e-outer">
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="e-outer"
+        >
           <h2 className="e-heading">arts and personalities.</h2>
-        </div>
+        </motion.div>
       </div>
       <div className="s-section wf-section">
         <div className="grid-slider-wrap w-dyn-list">
-          <div className="w-dyn-empty">
+          <motion.div
+            className="w-dyn-empty"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             <div>No items found.</div>
-          </div>
+          </motion.div>
         </div>
         <div className="l-wrap l-lerp">
           <div className="link-wrap">

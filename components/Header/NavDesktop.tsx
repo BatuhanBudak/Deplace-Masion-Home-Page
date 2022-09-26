@@ -1,44 +1,39 @@
+import { LogoVertical } from "../Icon";
+
 export default function NavDesktop() {
   return (
     <div className="nav__menu">
-      <ul className="nav__menu__list">
-        <li className="nav__menu__list__item">
-          <a href="" className="nav__menu__list__item__link">
-            WORK
+      <div className="header-wrap h-left">
+        <a
+          aria-label="header-logo"
+          className="header-logo w-inline-block w--current"
+        >
+          <div className="logo-wrap">
+            <div className="logo-inner">
+              <LogoVertical />
+              <LogoVertical />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div className="header-wrap h-right">
+        <div className="w-commerce-commercecartwrapper">
+          <a
+            href="#"
+            className="w-commerce-commercecartopenlink cart-button w-inline-block"
+          >
+            <div className="cart-wrap">
+              <div className="cart-inner">
+                <div className="cart-text ct-face w-inline-block">Cart</div>
+                <div className="cart-text ct-side w-inline-block">Cart</div>
+              </div>
+            </div>
+            <div className="w-commerce-commercecartopenlinkcount cart-quantity">
+              0
+            </div>
           </a>
-        </li>
-
-        <li className="nav__menu__list__item  active-link">
-          <a href="" className="nav__menu__list__item__link ">
-            ABOUT
-          </a>
-        </li>
-        <li className="nav__menu__list__item">
-          <a href="" className="nav__menu__list__item__link">
-            NEWS
-          </a>
-        </li>
-        <li className="nav__menu__list__item">
-          <a href="" className="nav__menu__list__item__link">
-            THINKING
-          </a>
-        </li>
-        <li className="nav__menu__list__item">
-          <a href="" className="nav__menu__list__item__link">
-            PLEDGE
-          </a>
-        </li>
-        <li className="nav__menu__list__item">
-          <a href="" className="nav__menu__list__item__link">
-            CAREERS
-          </a>
-        </li>
-        <li className="nav__menu__list__item">
-          <a href="" className="nav__menu__list__item__link">
-            CONTACT
-          </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 }
