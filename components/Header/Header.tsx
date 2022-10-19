@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import useToggle from "../../hooks/useToggle";
 import NavDrawer from "./NavDrawer";
 import NavMobile from "./NavMobile";

@@ -1,10 +1,4 @@
-import React, {
-  forwardRef,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import range from "lodash/range";
 
 export default function Cursor() {
@@ -12,18 +6,11 @@ export default function Cursor() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [goos, setGoos] = useState(initGoos);
   const cursorHistoryRef = useRef(Array(TAIL_LENGTH).fill({ x: 0, y: 0 }));
-  const goosRef = useRef([]);
-  goosRef.current = [];
-  const requestRef = React.useRef();
-  const previousTimeRef = React.useRef();
+  const requestRef = useRef<number | null>(null);
+  const previousTimeRef = useRef<number | null>(null);
+  const gooBreakPoint = 1280;
 
-  const addToRefs: (el) => void = (el) => {
-    if (el && !goosRef.current.includes(el)) {
-      goosRef.current.push(el);
-    }
-  };
-
-  const mouseMove = useCallback((e: { clientX; clientY }) => {
+  const mouseMove = useCallback((e: MouseEvent) => {
     setMousePos({
       x: e.clientX,
       y: e.clientY,
@@ -31,7 +18,11 @@ export default function Cursor() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("mousemove", mouseMove);
+    if (window) {
+      if (window.innerWidth >= gooBreakPoint) {
+        window.addEventListener("mousemove", mouseMove);
+      }
+    }
 
     return () => {
       window.removeEventListener("mousemove", mouseMove);
@@ -40,12 +31,12 @@ export default function Cursor() {
 
   function initGoos() {
     return range(0, TAIL_LENGTH).map((i) => {
-      return { id: i, x: 0, y: 0, style: {} };
+      return { gooId: i, x: 0, y: 0, style: {} };
     });
   }
 
   const updateCursor = useCallback(
-    (time) => {
+    (time: number) => {
       if (previousTimeRef.current !== undefined) {
         cursorHistoryRef.current.shift();
         cursorHistoryRef.current.push({ x: mousePos.x, y: mousePos.y });
@@ -63,7 +54,7 @@ export default function Cursor() {
 
           setGoos((oldgooes) =>
             oldgooes.map((goo) => {
-              if (goo.id === i) {
+              if (goo.gooId === i) {
                 return {
                   ...goo,
                   x: current.x,
@@ -84,27 +75,33 @@ export default function Cursor() {
 
   useEffect(() => {
     requestRef.current = requestAnimationFrame(updateCursor);
-    return () => cancelAnimationFrame(requestRef.current);
+    return () => cancelAnimationFrame(requestRef.current!);
   }, [updateCursor]);
 
-  const Goo = forwardRef(({ id, x, y }, ref) => {
+  interface Props {
+    gooId: number;
+    x: number;
+    y: number;
+  }
+
+  const Goo = (props: Props) => {
     return (
       <div
         className="cursor-circle"
-        id={id}
         style={{
-          transform: `translate(${x}px, ${y}px) scale(${id / TAIL_LENGTH})`,
+          transform: `translate(${props.x}px, ${props.y}px) scale(${
+            Number(props.gooId) / TAIL_LENGTH
+          })`,
         }}
-        ref={ref}
       ></div>
     );
-  });
+  };
   Goo.displayName = "Goo";
 
   return (
     <div id="cursor">
-      {goos.map((goo) => (
-        <Goo id={goo.id} key={goo.id} x={goo.x} y={goo.y} ref={addToRefs} />
+      {goos.map((goo, i) => (
+        <Goo gooId={goo.gooId} key={i} x={goo.x} y={goo.y} />
       ))}
     </div>
   );
