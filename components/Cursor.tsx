@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import range from "lodash/range";
 
 export default function Cursor() {
   const TAIL_LENGTH = 20;
@@ -30,7 +29,7 @@ export default function Cursor() {
   }, [mouseMove]);
 
   function initGoos() {
-    return range(0, TAIL_LENGTH).map((i) => {
+    return Array.from({ length: TAIL_LENGTH }, (v, i) => i).map((i) => {
       return { gooId: i, x: 0, y: 0, style: {} };
     });
   }
